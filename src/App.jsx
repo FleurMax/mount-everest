@@ -41,9 +41,12 @@ const Countdown = ({ targetDate }) => {
       </div>
       <div className="countdown-item">
         <span className="countdown-value">{timeLeft.minutes}</span>
-        <span className="countdown-label">Minutes</span>
+        <span className="countdown-label">Min</span>
       </div>
-      {/* Seconds hidden for a cleaner look as requested, but logic is there */}
+      <div className="countdown-item seconds-item">
+        <span className="countdown-value">{timeLeft.seconds}</span>
+        <span className="countdown-label">Sec</span>
+      </div>
     </div>
   );
 };
@@ -75,6 +78,7 @@ function App() {
           <div className="container hero-content">
             <span className="hero-tagline">Expédition 2027</span>
             <h2 className="hero-title">La Quête de l'Everest</h2>
+            <p className="hero-age-tagline">« L’âge est un chiffre »</p>
             <p className="hero-description">À 81 ans, mon plus grand sommet m'attend encore. Rejoignez-moi dans cette préparation hors du commun.</p>
             
             <Countdown targetDate={targetDate} />
@@ -87,12 +91,21 @@ function App() {
           </div>
         </section>
 
-        {/* Journal d'Entraînement */}
+        <section id="message" className="section message-section" style={{ backgroundColor: 'var(--primary-blue)', color: 'white', textAlign: 'center' }}>
+          <div className="container">
+            <blockquote className="inspire-quote">
+              <p>« Donner envie et espoir à ceux qui en ont vraiment besoin. »</p>
+              <cite>— Georges, 81 ans</cite>
+            </blockquote>
+          </div>
+        </section>
+
+        {/* Journal & Programme */}
         <section id="journal" className="section journal-section">
           <div className="container">
-            <h2 className="section-title">Journal d'Entraînement</h2>
+            <h2 className="section-title">Journal & Programme</h2>
             <p className="section-subtitle" style={{ textAlign: 'center', fontSize: '1.4rem', fontWeight: 700, marginBottom: '3rem', color: 'var(--primary-blue)' }}>
-              « La régularité prime sur l'intensité »
+              « 60 publications à venir : Suivez mon programme détaillé »
             </p>
             
             <div className="journal-grid">
@@ -101,8 +114,8 @@ function App() {
                   <img src="/img/Other/WhatsApp Image 2026-03-27 at 18.30.59 (2).jpeg" alt="Entraînement de Georges" className="card-img" loading="lazy" />
                 </div>
                 <div className="card-content">
-                  <h3>Entraînement</h3>
-                  <p>Préparation physique adaptée : endurance rurale et renforcement spécifique.</p>
+                  <h3>Le Programme</h3>
+                  <p>Découvrez prochainement mon cursus d'entraînement complet en 60 étapes.</p>
                 </div>
               </article>
 
@@ -136,10 +149,11 @@ function App() {
               <img src="/img/Dernière expédition  Gokio/bf65b2e2-5f02-411f-a027-23cce196f2da.jpg" alt="Georges en montagne" className="bio-img" loading="lazy" />
             </div>
             <div className="bio-text-content">
-              <h2 className="section-title text-left">L’âge est un chiffre</h2>
-              <p className="bio-intro">Georges n'est pas un retraité ordinaire. Montagnard passionné depuis toujours, il a multiplié les exploits sportifs ces dernières années.</p>
+              <h2 className="section-title text-left">Mon Parcours Sportif</h2>
+              <p className="bio-intro">« L'âge est un chiffre, le parcours est une leçon de vie. »</p>
               <div className="bio-details">
-                <p>Récemment, Georges a mené plusieurs expéditions à plus de 6000 mètres d'altitude, prouvant que la volonté surpasse le temps. Ses yeux sont désormais rivés sur le Toit du Monde.</p>
+                <p>Découvrez prochainement le récit complet de mon parcours : mes exploits sportifs récents à plus de 6000 mètres, mais aussi les périodes de ma vie où le sport n'était pas au centre de mon quotidien.</p>
+                <p>À travers ce partage, je souhaite donner envie et espoir à ceux qui en ont vraiment besoin.</p>
                 <p>« Mon objectif n'est pas de battre un record, mais de vivre pleinement chaque mètre gravi. »</p>
               </div>
             </div>
@@ -177,14 +191,6 @@ function App() {
             <h3>Contact</h3>
             <p>Email: contact@georges-everest.fr</p>
             <p>Besançon, France</p>
-          </div>
-          <div className="footer-social">
-            <h3>Suivez l'Aventure</h3>
-            <div className="social-icons">
-              <a href="#" aria-label="Facebook">Facebook</a>
-              <a href="#" aria-label="Instagram">Instagram</a>
-              <a href="#" aria-label="YouTube">YouTube</a>
-            </div>
           </div>
         </div>
         <div className="footer-bottom">

@@ -43,7 +43,7 @@ nav a:hover {
   justify-content: center;
   background-image: url('/img/Gokio expédition Hymalaya/4a8c67df-ffd9-4349-bffc-d76d7fca0c32.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: top;
   margin-top: 80px;
   color: white;
   text-align: center;
@@ -80,12 +80,24 @@ nav a:hover {
   font-size: clamp(3rem, 10vw, 5rem);
   color: white;
   line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.hero-age-tagline {
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--accent-orange);
   margin-bottom: 1.5rem;
+  opacity: 0.9;
 }
 
 .hero-description {
   font-size: 1.25rem;
   margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
   opacity: 0.95;
 }
 
@@ -93,16 +105,17 @@ nav a:hover {
 .countdown-container {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
   margin-bottom: 3rem;
+  flex-wrap: wrap;
 }
 
 .countdown-item {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  padding: 1.5rem;
+  padding: 1.2rem;
   border-radius: 15px;
-  min-width: 100px;
+  min-width: 90px;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -118,6 +131,27 @@ nav a:hover {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+/* Message Section */
+.message-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--bg-dark) 100%);
+}
+
+.inspire-quote p {
+  font-size: 2.5rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+}
+
+.inspire-quote cite {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent-orange);
 }
 
 /* Journal Grid */
@@ -272,29 +306,117 @@ footer {
 }
 
 /* Responsiveness */
-@media (max-width: 768px) {
-  .section {
-    padding: 60px 0;
+@media (max-width: 991px) {
+  .section-title {
+    font-size: 2.2rem;
   }
   
-  nav {
-    display: none; /* In a real app, I'd add a mobile menu. For now, keep it simple as requested. */
+  .bio-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-left {
+    text-align: center;
+  }
+
+  .bio-image-wrapper {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 1rem 0;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .hero-section {
+    height: auto;
+    padding: 120px 0 80px;
   }
 
   .hero-title {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-age-tagline {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
   }
 
   .countdown-container {
-    gap: 0.75rem;
+    gap: 0.5rem;
   }
 
   .countdown-item {
-    min-width: 80px;
-    padding: 1rem;
+    min-width: 75px;
+    padding: 0.8rem;
   }
 
   .countdown-value {
+    font-size: 1.5rem;
+  }
+
+  .countdown-label {
+    font-size: 0.7rem;
+  }
+
+  .inspire-quote p {
     font-size: 1.8rem;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    display: none; /* Hide nav for extremely small screens or implement a drawer */
+  }
+
+  #site-title {
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .countdown-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .countdown-item {
+    min-width: auto;
   }
 }
