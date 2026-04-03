@@ -58,14 +58,14 @@ function App() {
     <div className="app">
       <header id="main-header">
         <div className="container header-content">
-          <h1 id="site-title">Georges : Objectif Everest</h1>
+          <h1 id="site-title">Georges : Le chemin du toit du monde</h1>
           <nav>
             <ul className="nav-links">
               <li><a href="#hero">Accueil</a></li>
-              <li><a href="#journal">Journal</a></li>
+              <li><a href="#programme">Le Chemin</a></li>
+              <li><a href="#methode">La Méthode</a></li>
               <li><a href="#bio">Georges</a></li>
-              <li><a href="#guide">Guide de Vie</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#sponsor">Sponsors</a></li>
             </ul>
           </nav>
         </div>
@@ -76,125 +76,160 @@ function App() {
         <section id="hero" className="hero-section">
           <div className="hero-overlay"></div>
           <div className="container hero-content">
-            <span className="hero-tagline">Expédition 2027</span>
-            <h2 className="hero-title">La Quête de l'Everest</h2>
-            <p className="hero-age-tagline">« L’âge est un chiffre »</p>
-            <p className="hero-description">À 81 ans, mon plus grand sommet m'attend encore. Rejoignez-moi dans cette préparation hors du commun.</p>
+            <span className="hero-tagline">Expédition 2026-2027</span>
+            <h2 className="hero-title">Le chemin du toit du monde</h2>
+            <p className="hero-age-tagline">« Arrêter le vieillissement et retrouver un tonus d'enfer »</p>
+            <p className="hero-description">
+              Une discipline accessible, un programme ni oppressant ni sacrificiel. 
+              Même si vous n'avez jamais fait de sport de votre vie, le sommet est à votre portée.
+            </p>
             
             <Countdown targetDate={targetDate} />
 
             <div className="hero-cta-wrapper">
-              <button className="btn btn-primary" id="support-btn">
-                Soutenir l'ascension <span className="goal">(Objectif 150 000€)</span>
-              </button>
+              <a href="#sponsor" className="btn btn-primary">
+                Devenir Sponsor <span className="goal">(Objectif 150 000€)</span>
+              </a>
             </div>
           </div>
         </section>
 
-        <section id="message" className="section message-section" style={{ backgroundColor: 'var(--primary-blue)', color: 'white', textAlign: 'center' }}>
+        {/* Message de Georges */}
+        <section id="message" className="section message-section">
           <div className="container">
             <blockquote className="inspire-quote">
-              <p>« Donner envie et espoir à ceux qui en ont vraiment besoin. »</p>
+              <p>« Je ne suis pas un surhomme aux muscles énormes. C’est une discipline avec un programme accessible que chacun peut appliquer. »</p>
               <cite>— Georges, 81 ans</cite>
             </blockquote>
           </div>
         </section>
 
-        {/* Journal & Programme */}
-        <section id="journal" className="section journal-section">
+        {/* Programme Timeline */}
+        <section id="programme" className="section timeline-section">
           <div className="container">
-            <h2 className="section-title">Journal & Programme</h2>
-            <p className="section-subtitle" style={{ textAlign: 'center', fontSize: '1.4rem', fontWeight: 700, marginBottom: '3rem', color: 'var(--primary-blue)' }}>
-              « 60 publications à venir : Suivez mon programme détaillé »
-            </p>
+            <h2 className="section-title">Le Chemin vers l'Everest</h2>
+            <p className="section-subtitle">Mon programme pour les 24 prochains mois</p>
             
-            <div className="journal-grid">
-              <article className="journal-card">
-                <div className="card-img-wrapper">
-                  <img src="/img/Other/WhatsApp Image 2026-03-27 at 18.30.59 (2).jpeg" alt="Entraînement de Georges" className="card-img" loading="lazy" />
+            <div className="timeline-container">
+              <div className="timeline-item">
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <span className="timeline-date">Juillet 2026</span>
+                  <h3>Grandes Jorasses (4000m)</h3>
+                  <p>Alpes françaises : Une ascension mythique et technique pour forger l'expérience.</p>
                 </div>
-                <div className="card-content">
-                  <h3>Le Programme</h3>
-                  <p>Découvrez prochainement mon cursus d'entraînement complet en 60 étapes.</p>
+              </div>
+              
+              <div className="timeline-item">
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <span className="timeline-date">Novembre 2026</span>
+                  <h3>Népal : Sommet de 7000m</h3>
+                  <p>Première immersion en très haute altitude dans l'Himalaya.</p>
                 </div>
-              </article>
+              </div>
 
-              <article className="journal-card">
-                <div className="card-img-wrapper">
-                  <img src="/img/Other/WhatsApp Image 2026-03-27 at 18.30.59.jpeg" alt="Nutrition de Georges" className="card-img" loading="lazy" />
+              <div className="timeline-item">
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <span className="timeline-date">Février 2027</span>
+                  <h3>Préparation intensive</h3>
+                  <p>Affinage physique et mental avant le bouquet final.</p>
                 </div>
-                <div className="card-content">
-                  <h3>Nutrition</h3>
-                  <p>L'énergie nécessaire pour les sommets : diététique équilibrée et hydratation.</p>
-                </div>
-              </article>
+              </div>
 
-              <article className="journal-card">
-                <div className="card-img-wrapper">
-                  <img src="/img/Other/WhatsApp Image 2026-03-27 at 18.31.00.jpeg" alt="Stretching et mobilité" className="card-img" loading="lazy" />
+              <div className="timeline-item">
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <span className="timeline-date">Octobre 2027</span>
+                  <h3>Cho Oyu (8201m)</h3>
+                  <p>L'épreuve ultime face à l'oxygène rare avant l'Everest.</p>
                 </div>
-                <div className="card-content">
-                  <h3>Stretching</h3>
-                  <p>Mobilité et souplesse : clés essentielles pour éviter les blessures à 81 ans.</p>
+              </div>
+
+              <div className="timeline-item highlight">
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <span className="timeline-date">À suivre...</span>
+                  <h3>Mont Everest (8848m)</h3>
+                  <p>L'aboutissement d'une vie, le Toit du Monde.</p>
                 </div>
-              </article>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Biography */}
+        {/* Biography Section */}
         <section id="bio" className="section bio-section text-left">
           <div className="container bio-flex">
             <div className="bio-image-wrapper">
               <img src="/img/Dernière expédition  Gokio/bf65b2e2-5f02-411f-a027-23cce196f2da.jpg" alt="Georges en montagne" className="bio-img" loading="lazy" />
             </div>
             <div className="bio-text-content">
-              <h2 className="section-title text-left">Mon Parcours Sportif</h2>
-              <p className="bio-intro">« L'âge est un chiffre, le parcours est une leçon de vie. »</p>
+              <h2 className="section-title text-left">Georges, Octogénaire Passionné</h2>
+              <p className="bio-intro">« Je n'ai pas toujours été sportif. »</p>
               <div className="bio-details">
-                <p>Découvrez prochainement le récit complet de mon parcours : mes exploits sportifs récents à plus de 6000 mètres, mais aussi les périodes de ma vie où le sport n'était pas au centre de mon quotidien.</p>
-                <p>À travers ce partage, je souhaite donner envie et espoir à ceux qui en ont vraiment besoin.</p>
-                <p>« Mon objectif n'est pas de battre un record, mais de vivre pleinement chaque mètre gravi. »</p>
+                <p>Mon parcours est celui d'un homme qui a connu des périodes sédentaires. Mes exploits sportifs récents à plus de 6000m prouvent qu'avec de la méthode, on peut se refaire un tonus d'enfer.</p>
+                <p>Mon parcours n'est pas sacrificiel. C'est une discipline qui redonne goût et sens à la vie.</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Guide de Vie */}
-        <section id="guide" className="section guide-section">
+        {/* La Méthode Section */}
+        <section id="methode" className="section guide-section bg-light">
           <div className="container">
-            <h2 className="section-title">Le Guide de Vie</h2>
+            <h2 className="section-title">Les 4 Piliers de la Longévité</h2>
             <div className="guide-grid">
               <div className="guide-item">
-                <div className="guide-icon">🍎</div>
-                <h3>Nutrition</h3>
-                <p>Aliments naturels et locaux pour une vitalité durable.</p>
+                <div className="guide-icon">🏔️</div>
+                <h3>Sport approprié</h3>
+                <p>Adapté à chaque octogénaire, même sans passé sportif préalable.</p>
               </div>
               <div className="guide-item">
-                <div className="guide-icon">💤</div>
-                <h3>Sommeil</h3>
-                <p>Une récupération optimale est le secret de la longévité.</p>
+                <div className="guide-icon">🧠</div>
+                <h3>Comportement</h3>
+                <p>Une discipline mentale claire et bienveillante envers soi-même.</p>
               </div>
               <div className="guide-item">
-                <div className="guide-icon">🧘</div>
-                <h3>Mobilité</h3>
-                <p>Garder le corps en mouvement, chaque jour, sans exception.</p>
+                <div className="guide-icon">🥗</div>
+                <h3>Alimentation</h3>
+                <p>L’énergie vitale indispensable pour nourrir le corps et l’effort.</p>
               </div>
+              <div className="guide-item">
+                <div className="guide-icon">✨</div>
+                <h3>Hygiène de vie</h3>
+                <p>Un ensemble d’habitudes pour freiner durablement le vieillissement.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Sponsors Section */}
+        <section id="sponsor" className="section sponsor-section">
+          <div className="container">
+            <div className="sponsor-card">
+              <h2 className="section-title">Devenir Partenaire</h2>
+              <p className="sponsor-description">Réaliser ce projet nécessite des fonds importants. J'invite les marques et partenaires qui partagent ces valeurs de persévérance et de longévité à me rejoindre.</p>
+              <div className="sponsor-goal">
+                <span className="goal-current">Objectif : 150 000€</span>
+              </div>
+              <button className="btn btn-primary">Nous Contacter pour un Sponsoring</button>
             </div>
           </div>
         </section>
       </main>
 
-      <footer id="contact" className="main-footer">
+      <footer className="main-footer">
         <div className="container footer-content">
           <div className="footer-info">
-            <h3>Contact</h3>
+            <h3>Georges : Le chemin du toit du monde</h3>
             <p>Email: contact@georges-everest.fr</p>
             <p>Besançon, France</p>
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2026 Georges : Objectif Everest. Tous droits réservés.</p>
+          <p>&copy; 2026 Georges. Tous droits réservés.</p>
         </div>
       </footer>
     </div>
