@@ -88,7 +88,7 @@ function App() {
 
             <div className="hero-cta-wrapper">
               <a href="#sponsor" className="btn btn-primary">
-                Devenir Sponsor <span className="goal">(Objectif 150 000€)</span>
+                Devenir Sponsor <span className="goal">(Objectif 300 000€)</span>
               </a>
             </div>
           </div>
@@ -212,7 +212,7 @@ function App() {
               <h2 className="section-title">Devenir Partenaire</h2>
               <p className="sponsor-description">Réaliser ce projet nécessite des fonds importants. J'invite les marques et partenaires qui partagent ces valeurs de persévérance et de longévité à me rejoindre.</p>
               <div className="sponsor-goal">
-                <span className="goal-current">Objectif : 150 000€</span>
+                <span className="goal-current">Objectif : 300 000€</span>
               </div>
               <button className="btn btn-primary">Nous Contacter pour un Sponsoring</button>
             </div>
