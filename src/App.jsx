@@ -53,19 +53,29 @@ const Countdown = ({ targetDate }) => {
 
 function App() {
   const targetDate = "2027-04-01T00:00:00";
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="app">
+    <div className={`app ${isMobileMenuOpen ? 'menu-open' : ''}`}>
       <header id="main-header">
         <div className="container header-content">
           <h1 id="site-title">Georges : Le chemin du toit du monde</h1>
-          <nav>
+          <button 
+            className="mobile-menu-toggle" 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle Menu"
+          >
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </button>
+          <nav className={isMobileMenuOpen ? 'nav-active' : ''}>
             <ul className="nav-links">
-              <li><a href="#hero">Accueil</a></li>
-              <li><a href="#programme">Le Chemin</a></li>
-              <li><a href="#methode">La Méthode</a></li>
-              <li><a href="#bio">Georges</a></li>
-              <li><a href="#sponsor">Sponsors</a></li>
+              <li><a href="#hero" onClick={() => setIsMobileMenuOpen(false)}>Accueil</a></li>
+              <li><a href="#programme" onClick={() => setIsMobileMenuOpen(false)}>Le Chemin</a></li>
+              <li><a href="#methode" onClick={() => setIsMobileMenuOpen(false)}>La Méthode</a></li>
+              <li><a href="#bio" onClick={() => setIsMobileMenuOpen(false)}>Georges</a></li>
+              <li><a href="#sponsor" onClick={() => setIsMobileMenuOpen(false)}>Sponsors</a></li>
             </ul>
           </nav>
         </div>
